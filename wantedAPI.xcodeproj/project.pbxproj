@@ -16,6 +16,13 @@
 		FCAFA9EC28A770EC00E35A60 /* wantedAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFA9EB28A770EC00E35A60 /* wantedAPITests.swift */; };
 		FCAFA9F628A770EC00E35A60 /* wantedAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFA9F528A770EC00E35A60 /* wantedAPIUITests.swift */; };
 		FCAFA9F828A770EC00E35A60 /* wantedAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFA9F728A770EC00E35A60 /* wantedAPIUITestsLaunchTests.swift */; };
+		FCAFAA0628A7712300E35A60 /* WantedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFAA0528A7712300E35A60 /* WantedList.swift */; };
+		FCAFAA0828A771A800E35A60 /* WantedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFAA0728A771A800E35A60 /* WantedAPI.swift */; };
+		FCAFAA1228A77ADB00E35A60 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFAA1128A77ADB00E35A60 /* APIError.swift */; };
+		FCAFAA1428A77D1600E35A60 /* WantedListActionCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFAA1328A77D1600E35A60 /* WantedListActionCreator.swift */; };
+		FCAFAA1628A77D6300E35A60 /* CombineDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFAA1528A77D6300E35A60 /* CombineDispatcher.swift */; };
+		FCAFAA1D28A7814300E35A60 /* WantedListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFAA1C28A7814300E35A60 /* WantedListStore.swift */; };
+		FCAFAA1F28A782D000E35A60 /* WantedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFAA1E28A782D000E35A60 /* WantedListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		FCAFA9F128A770EC00E35A60 /* wantedAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wantedAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAFA9F528A770EC00E35A60 /* wantedAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wantedAPIUITests.swift; sourceTree = "<group>"; };
 		FCAFA9F728A770EC00E35A60 /* wantedAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wantedAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FCAFAA0528A7712300E35A60 /* WantedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedList.swift; sourceTree = "<group>"; };
+		FCAFAA0728A771A800E35A60 /* WantedAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedAPI.swift; sourceTree = "<group>"; };
+		FCAFAA1128A77ADB00E35A60 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		FCAFAA1328A77D1600E35A60 /* WantedListActionCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedListActionCreator.swift; sourceTree = "<group>"; };
+		FCAFAA1528A77D6300E35A60 /* CombineDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineDispatcher.swift; sourceTree = "<group>"; };
+		FCAFAA1C28A7814300E35A60 /* WantedListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedListStore.swift; sourceTree = "<group>"; };
+		FCAFAA1E28A782D000E35A60 /* WantedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +113,11 @@
 		FCAFA9D328A770EB00E35A60 /* wantedAPI */ = {
 			isa = PBXGroup;
 			children = (
-				FCAFA9D428A770EB00E35A60 /* AppDelegate.swift */,
-				FCAFA9D628A770EB00E35A60 /* SceneDelegate.swift */,
-				FCAFA9D828A770EB00E35A60 /* ViewController.swift */,
-				FCAFA9DA28A770EB00E35A60 /* Main.storyboard */,
+				FCAFAA1A28A77F7300E35A60 /* WantedList */,
+				FCAFAA1928A77F0B00E35A60 /* API */,
+				FCAFAA1828A77EF600E35A60 /* Entity */,
+				FCAFAA1728A77ED200E35A60 /* Util */,
+				FCAFAA0428A770FA00E35A60 /* App */,
 				FCAFA9DD28A770EC00E35A60 /* Assets.xcassets */,
 				FCAFA9DF28A770EC00E35A60 /* LaunchScreen.storyboard */,
 				FCAFA9E228A770EC00E35A60 /* Info.plist */,
@@ -125,6 +140,60 @@
 				FCAFA9F728A770EC00E35A60 /* wantedAPIUITestsLaunchTests.swift */,
 			);
 			path = wantedAPIUITests;
+			sourceTree = "<group>";
+		};
+		FCAFAA0428A770FA00E35A60 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FCAFA9D428A770EB00E35A60 /* AppDelegate.swift */,
+				FCAFA9D628A770EB00E35A60 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FCAFAA1728A77ED200E35A60 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FCAFAA1528A77D6300E35A60 /* CombineDispatcher.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		FCAFAA1828A77EF600E35A60 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FCAFAA1128A77ADB00E35A60 /* APIError.swift */,
+				FCAFAA0528A7712300E35A60 /* WantedList.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FCAFAA1928A77F0B00E35A60 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FCAFAA0728A771A800E35A60 /* WantedAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FCAFAA1A28A77F7300E35A60 /* WantedList */ = {
+			isa = PBXGroup;
+			children = (
+				FCAFAA1B28A7813000E35A60 /* Flux */,
+				FCAFA9D828A770EB00E35A60 /* ViewController.swift */,
+				FCAFA9DA28A770EB00E35A60 /* Main.storyboard */,
+				FCAFAA1E28A782D000E35A60 /* WantedListViewModel.swift */,
+			);
+			path = WantedList;
+			sourceTree = "<group>";
+		};
+		FCAFAA1B28A7813000E35A60 /* Flux */ = {
+			isa = PBXGroup;
+			children = (
+				FCAFAA1328A77D1600E35A60 /* WantedListActionCreator.swift */,
+				FCAFAA1C28A7814300E35A60 /* WantedListStore.swift */,
+			);
+			path = Flux;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +328,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCAFA9D928A770EB00E35A60 /* ViewController.swift in Sources */,
+				FCAFAA1F28A782D000E35A60 /* WantedListViewModel.swift in Sources */,
 				FCAFA9D528A770EB00E35A60 /* AppDelegate.swift in Sources */,
+				FCAFAA1628A77D6300E35A60 /* CombineDispatcher.swift in Sources */,
+				FCAFAA1428A77D1600E35A60 /* WantedListActionCreator.swift in Sources */,
+				FCAFAA1D28A7814300E35A60 /* WantedListStore.swift in Sources */,
+				FCAFAA1228A77ADB00E35A60 /* APIError.swift in Sources */,
+				FCAFAA0628A7712300E35A60 /* WantedList.swift in Sources */,
 				FCAFA9D728A770EB00E35A60 /* SceneDelegate.swift in Sources */,
+				FCAFAA0828A771A800E35A60 /* WantedAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
