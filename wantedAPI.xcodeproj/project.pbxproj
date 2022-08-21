@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C59A91A428B0D00A00D69C0D /* UICollectionView+Register.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A91A328B0D00A00D69C0D /* UICollectionView+Register.swift.swift */; };
+		C59A91A628B0D16900D69C0D /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A91A528B0D16800D69C0D /* Instantiatable.swift */; };
+		C59A91A828B0D19900D69C0D /* NSObject+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A91A728B0D19900D69C0D /* NSObject+Name.swift */; };
+		C59A91AB28B0DE2B00D69C0D /* WantedListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A91A928B0DE2B00D69C0D /* WantedListCollectionViewCell.swift */; };
+		C59A91AC28B0DE2B00D69C0D /* WantedListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C59A91AA28B0DE2B00D69C0D /* WantedListCollectionViewCell.xib */; };
 		FCAFA9D528A770EB00E35A60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFA9D428A770EB00E35A60 /* AppDelegate.swift */; };
 		FCAFA9D728A770EB00E35A60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFA9D628A770EB00E35A60 /* SceneDelegate.swift */; };
 		FCAFA9D928A770EB00E35A60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFA9D828A770EB00E35A60 /* ViewController.swift */; };
@@ -43,6 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C59A91A328B0D00A00D69C0D /* UICollectionView+Register.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift.swift"; sourceTree = "<group>"; };
+		C59A91A528B0D16800D69C0D /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
+		C59A91A728B0D19900D69C0D /* NSObject+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Name.swift"; sourceTree = "<group>"; };
+		C59A91A928B0DE2B00D69C0D /* WantedListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedListCollectionViewCell.swift; sourceTree = "<group>"; };
+		C59A91AA28B0DE2B00D69C0D /* WantedListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WantedListCollectionViewCell.xib; sourceTree = "<group>"; };
 		FCAFA9D128A770EB00E35A60 /* wantedAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wantedAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAFA9D428A770EB00E35A60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCAFA9D628A770EB00E35A60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C59A919E28B0CD9200D69C0D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C59A91A928B0DE2B00D69C0D /* WantedListCollectionViewCell.swift */,
+				C59A91AA28B0DE2B00D69C0D /* WantedListCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		FCAFA9C828A770EB00E35A60 = {
 			isa = PBXGroup;
 			children = (
@@ -154,7 +173,10 @@
 		FCAFAA1728A77ED200E35A60 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C59A91A328B0D00A00D69C0D /* UICollectionView+Register.swift.swift */,
 				FCAFAA1528A77D6300E35A60 /* CombineDispatcher.swift */,
+				C59A91A528B0D16800D69C0D /* Instantiatable.swift */,
+				C59A91A728B0D19900D69C0D /* NSObject+Name.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -179,6 +201,7 @@
 		FCAFAA1A28A77F7300E35A60 /* WantedList */ = {
 			isa = PBXGroup;
 			children = (
+				C59A919E28B0CD9200D69C0D /* Cell */,
 				FCAFAA1B28A7813000E35A60 /* Flux */,
 				FCAFA9D828A770EB00E35A60 /* ViewController.swift */,
 				FCAFA9DA28A770EB00E35A60 /* Main.storyboard */,
@@ -302,6 +325,7 @@
 			files = (
 				FCAFA9E128A770EC00E35A60 /* LaunchScreen.storyboard in Resources */,
 				FCAFA9DE28A770EC00E35A60 /* Assets.xcassets in Resources */,
+				C59A91AC28B0DE2B00D69C0D /* WantedListCollectionViewCell.xib in Resources */,
 				FCAFA9DC28A770EB00E35A60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,11 +355,15 @@
 				FCAFAA1F28A782D000E35A60 /* WantedListViewModel.swift in Sources */,
 				FCAFA9D528A770EB00E35A60 /* AppDelegate.swift in Sources */,
 				FCAFAA1628A77D6300E35A60 /* CombineDispatcher.swift in Sources */,
+				C59A91A828B0D19900D69C0D /* NSObject+Name.swift in Sources */,
 				FCAFAA1428A77D1600E35A60 /* WantedListActionCreator.swift in Sources */,
 				FCAFAA1D28A7814300E35A60 /* WantedListStore.swift in Sources */,
 				FCAFAA1228A77ADB00E35A60 /* APIError.swift in Sources */,
 				FCAFAA0628A7712300E35A60 /* WantedList.swift in Sources */,
 				FCAFA9D728A770EB00E35A60 /* SceneDelegate.swift in Sources */,
+				C59A91A428B0D00A00D69C0D /* UICollectionView+Register.swift.swift in Sources */,
+				C59A91AB28B0DE2B00D69C0D /* WantedListCollectionViewCell.swift in Sources */,
+				C59A91A628B0D16900D69C0D /* Instantiatable.swift in Sources */,
 				FCAFAA0828A771A800E35A60 /* WantedAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -496,7 +524,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -530,7 +558,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -558,7 +586,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

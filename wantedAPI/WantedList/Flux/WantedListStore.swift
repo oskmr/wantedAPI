@@ -13,8 +13,8 @@ final class WantedListStore: CombineStorable {
     private var cancellableSet: Set<AnyCancellable> = []
     let dispatcher: RegisterableDispatcher
 
-    @Published private(set) var list: [Item]?
-    @Published private(set) var failure: Void?
+    @Published private(set) var list: [Item] = []
+    let failureFetchWantedList = PassthroughSubject<Void, Never>()
 
     init(
         dispatcher: RegisterableDispatcher = .init()
@@ -28,7 +28,7 @@ final class WantedListStore: CombineStorable {
                     self?.list = list
 
                 case .failure:
-                    self?.failure = ()
+                    self?.failureFetchWantedList.send()
                 }
             })
             .store(in: &cancellableSet)

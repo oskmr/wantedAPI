@@ -14,6 +14,11 @@ final class WantedListViewModel {
         case isShowAlert(Bool)
     }
 
+    struct SectionModel {
+        let section: ViewController.Section
+        let rows: [ViewController.Row]
+    }
+
     // input
     let viewDidLoad = PassthroughSubject<Void, Never>()
     let state = PassthroughSubject<State, Never>()
@@ -21,9 +26,11 @@ final class WantedListViewModel {
     // let dismissAlert = PassthroughSubject<Void, Never>()
 
     // output
-    @Published private(set) var list: [Item]?
-    @Published private(set) var failure: Void?
-    @Published private(set) var reload: Void?
+    @Published private(set) var sectionModels: [SectionModel] = []
+    let failureFetchWantedList = PassthroughSubject<Void, Never>()
+    // @Published private(set) var list: [Item]?
+    // @Published private(set) var failure: Void?
+    // @Published private(set) var reload: Void?
 
     private var cancellabbleSet: Set<AnyCancellable> = []
     private let actionCreator: WantedListActionCreator
@@ -43,38 +50,18 @@ final class WantedListViewModel {
             .store(in: &cancellabbleSet)
 
         store.$list
-//            .map { list -> [Item] in
-//                guard let list = list else { return [] }
-//                print("vm-list\(list)")
-//                return list.map { list in
-//                        .init(rewardText: <#T##String?#>,
-//                              url: <#T##String#>,
-//                              details: <#T##String?#>,
-//                              gender: <#T##Gender?#>,
-//                              rewardMax: <#T##Int#>,
-//                              rewardMin: <#T##Int#>,
-//                              modified: <#T##Date#>,
-//                              itemDescription: <#T##String#>,
-//                              ageRange: <#T##String?#>,
-//                              title: <#T##String#>,
-//                              files: <#T##[Name : String]#>,
-//                              images: <#T##[Image]#>,
-//                              uid: <#T##String#>,
-//                              path: <#T##String#>,
-//                              subjects: <#T##[String]#>,
-//                              id: <#T##String#>)
-//                }
-//            }
+            .map { repositories -> [SectionModel] in
+                [.init(section: .wantedList, rows: repositories.map { .wantedList($0) })]
+            }
             .sink { [weak self] in
-                self?.list = $0
-
+                self?.sectionModels = $0
             }
             .store(in: &cancellabbleSet)
 
-        store.$failure
+        store.failureFetchWantedList
             .sink { [weak self] in
-                self?.failure = $0
-                self?.showErrorAlert
+                self?.failureFetchWantedList.send($0)
+                // self?.showErrorAlert
             }
             .store(in: &cancellabbleSet)
     }
