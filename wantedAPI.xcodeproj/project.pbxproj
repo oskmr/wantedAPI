@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C59A91A428B0D00A00D69C0D /* UICollectionView+Register.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A91A328B0D00A00D69C0D /* UICollectionView+Register.swift.swift */; };
-		C59A91A628B0D16900D69C0D /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A91A528B0D16800D69C0D /* Instantiatable.swift */; };
 		C59A91A828B0D19900D69C0D /* NSObject+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A91A728B0D19900D69C0D /* NSObject+Name.swift */; };
 		C59A91AB28B0DE2B00D69C0D /* WantedListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A91A928B0DE2B00D69C0D /* WantedListCollectionViewCell.swift */; };
 		C59A91AC28B0DE2B00D69C0D /* WantedListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C59A91AA28B0DE2B00D69C0D /* WantedListCollectionViewCell.xib */; };
@@ -49,7 +48,6 @@
 
 /* Begin PBXFileReference section */
 		C59A91A328B0D00A00D69C0D /* UICollectionView+Register.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift.swift"; sourceTree = "<group>"; };
-		C59A91A528B0D16800D69C0D /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
 		C59A91A728B0D19900D69C0D /* NSObject+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Name.swift"; sourceTree = "<group>"; };
 		C59A91A928B0DE2B00D69C0D /* WantedListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedListCollectionViewCell.swift; sourceTree = "<group>"; };
 		C59A91AA28B0DE2B00D69C0D /* WantedListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WantedListCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 			children = (
 				C59A91A328B0D00A00D69C0D /* UICollectionView+Register.swift.swift */,
 				FCAFAA1528A77D6300E35A60 /* CombineDispatcher.swift */,
-				C59A91A528B0D16800D69C0D /* Instantiatable.swift */,
 				C59A91A728B0D19900D69C0D /* NSObject+Name.swift */,
 			);
 			path = Util;
@@ -363,7 +360,6 @@
 				FCAFA9D728A770EB00E35A60 /* SceneDelegate.swift in Sources */,
 				C59A91A428B0D00A00D69C0D /* UICollectionView+Register.swift.swift in Sources */,
 				C59A91AB28B0DE2B00D69C0D /* WantedListCollectionViewCell.swift in Sources */,
-				C59A91A628B0D16900D69C0D /* Instantiatable.swift in Sources */,
 				FCAFAA0828A771A800E35A60 /* WantedAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
