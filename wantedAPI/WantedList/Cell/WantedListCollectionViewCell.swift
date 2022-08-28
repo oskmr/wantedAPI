@@ -22,16 +22,18 @@ final class WantedListCollectionViewCell: UICollectionViewCell {
             boxView.layer.shadowRadius = 4
         }
     }
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var rewardTextLabel: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.backgroundColor = .purple
     }
 
     func prepare(item: Item) {
-        // titleLabel.text = item.title
-        // rewardTextLabel.text = item.rewardText
+        titleLabel.text = item.title
+        rewardTextLabel.text = item.rewardText
     }
-
 }
