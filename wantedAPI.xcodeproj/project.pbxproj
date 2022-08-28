@@ -11,6 +11,8 @@
 		C59A91A828B0D19900D69C0D /* NSObject+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A91A728B0D19900D69C0D /* NSObject+Name.swift */; };
 		C59A91AB28B0DE2B00D69C0D /* WantedListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A91A928B0DE2B00D69C0D /* WantedListCollectionViewCell.swift */; };
 		C59A91AC28B0DE2B00D69C0D /* WantedListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C59A91AA28B0DE2B00D69C0D /* WantedListCollectionViewCell.xib */; };
+		C59A91AF28BBA82F00D69C0D /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = C59A91AE28BBA82F00D69C0D /* Nuke */; };
+		C59A91B128BBA90400D69C0D /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59A91B028BBA90400D69C0D /* UIImageView+URL.swift */; };
 		FCAFA9D528A770EB00E35A60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFA9D428A770EB00E35A60 /* AppDelegate.swift */; };
 		FCAFA9D728A770EB00E35A60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFA9D628A770EB00E35A60 /* SceneDelegate.swift */; };
 		FCAFA9D928A770EB00E35A60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAFA9D828A770EB00E35A60 /* ViewController.swift */; };
@@ -51,6 +53,7 @@
 		C59A91A728B0D19900D69C0D /* NSObject+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Name.swift"; sourceTree = "<group>"; };
 		C59A91A928B0DE2B00D69C0D /* WantedListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedListCollectionViewCell.swift; sourceTree = "<group>"; };
 		C59A91AA28B0DE2B00D69C0D /* WantedListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WantedListCollectionViewCell.xib; sourceTree = "<group>"; };
+		C59A91B028BBA90400D69C0D /* UIImageView+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
 		FCAFA9D128A770EB00E35A60 /* wantedAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wantedAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCAFA9D428A770EB00E35A60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCAFA9D628A770EB00E35A60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59A91AF28BBA82F00D69C0D /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +178,7 @@
 				C59A91A328B0D00A00D69C0D /* UICollectionView+Register.swift.swift */,
 				FCAFAA1528A77D6300E35A60 /* CombineDispatcher.swift */,
 				C59A91A728B0D19900D69C0D /* NSObject+Name.swift */,
+				C59A91B028BBA90400D69C0D /* UIImageView+URL.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -232,6 +237,9 @@
 			dependencies = (
 			);
 			name = wantedAPI;
+			packageProductDependencies = (
+				C59A91AE28BBA82F00D69C0D /* Nuke */,
+			);
 			productName = wantedAPI;
 			productReference = FCAFA9D128A770EB00E35A60 /* wantedAPI.app */;
 			productType = "com.apple.product-type.application";
@@ -304,6 +312,9 @@
 				Base,
 			);
 			mainGroup = FCAFA9C828A770EB00E35A60;
+			packageReferences = (
+				C59A91AD28BBA82F00D69C0D /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = FCAFA9D228A770EB00E35A60 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -360,6 +371,7 @@
 				FCAFA9D728A770EB00E35A60 /* SceneDelegate.swift in Sources */,
 				C59A91A428B0D00A00D69C0D /* UICollectionView+Register.swift.swift in Sources */,
 				C59A91AB28B0DE2B00D69C0D /* WantedListCollectionViewCell.swift in Sources */,
+				C59A91B128BBA90400D69C0D /* UIImageView+URL.swift in Sources */,
 				FCAFAA0828A771A800E35A60 /* WantedAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -702,6 +714,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C59A91AD28BBA82F00D69C0D /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C59A91AE28BBA82F00D69C0D /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C59A91AD28BBA82F00D69C0D /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FCAFA9C928A770EB00E35A60 /* Project object */;
 }
